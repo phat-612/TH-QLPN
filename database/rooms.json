@@ -6,8 +6,8 @@
             "limit_cpt": 40,
             "list_computers": [
                 {
-                    "computer_id": 101,
-                    "status": "active"
+                    "computer_id": 103,
+                    "status": "maintenance"
                 }
             ]
         }
