@@ -1,30 +1,37 @@
 {
-  "computers": [
-    {
-      "computer_id": 101,
-      "configuration": {
-        "monitor": "Dell 24 inch",
-        "CPU": "Intel i5",
-        "RAM": "16GB",
-        "storage": {
-          "type": "SSD",
-          "capacity": "512GB"
+    "computers": [
+        {
+            "computer_id": 101,
+            "configuration": {
+                "monitor": "Dell 24 inch",
+                "CPU": "Intel i5",
+                "RAM": "16GB",
+                "storageType": "SSD",
+                "storageCapacity": "512GB",
+                "status": "active"
+            }
+        },
+        {
+            "computer_id": 101,
+            "configuration": {
+                "monitor": "Dell 24 inch",
+                "CPU": "Intel i5",
+                "RAM": "16GB",
+                "storageType": "SSD",
+                "storageCapacity": "512GB",
+                "status": "active"
+            }
+        },
+        {
+            "computer_id": 101242342332,
+            "configuration": {
+                "monitor": "Dell 24 inch",
+                "CPU": "Intel i5",
+                "RAM": "16GB",
+                "storageType": "SSD",
+                "storageCapacity": "512GB",
+                "status": "active"
+            }
         }
-      },
-      "status": "active"
-    },
-    {
-      "computer_id": 101,
-      "configuration": {
-        "monitor": "Dell 24 inch",
-        "CPU": "Intel i5",
-        "RAM": "16GB",
-        "storage": {
-          "type": "SSD",
-          "capacity": "512GB"
-        }
-      },
-      "status": "active"
-    }
-  ]
+    ]
 }
