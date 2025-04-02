@@ -1,11 +1,11 @@
 {
-  "transactions": [
-    {
-      "transaction_id": 1,
-      "player_id": 1,
-      "amount": -20000,
-      "type": "playtime",
-      "timestamp": "2024-04-02T10:00:00Z"
-    }
-  ]
+    "transactions": [
+        {
+            "transaction_id": 1,
+            "player_id": 1,
+            "amount": -20000,
+            "type": "playtime",
+            "timestamp": "2024-04-02T10:00:00Z"
+        }
+    ]
 }
