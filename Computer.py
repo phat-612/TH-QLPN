@@ -43,5 +43,5 @@ computer1 = Computer(
     storage_capacity="512GB",
     status="active"
 )
-
 print("Dữ liệu máy tính đã được ghi vào file.")
+    
