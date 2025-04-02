@@ -6,6 +6,13 @@
       "username": "nguyenvana",
       "password": "hashed_password",
       "balance": 50000
+    },
+    {
+      "player_id": 2,
+      "name": "Nguyễn Văn CC",
+      "username": "0354514832",
+      "password": "123",
+      "balance": 99900999
     }
   ]
 }
