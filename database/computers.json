@@ -1,36 +1,25 @@
 {
     "computers": [
         {
-            "computer_id": 101,
+            "computer_id": 1,
             "configuration": {
-                "monitor": "Dell 24 inch",
+                "monitor": "LG",
                 "CPU": "Intel i5",
                 "RAM": "16GB",
                 "storageType": "SSD",
                 "storageCapacity": "512GB",
-                "status": "active"
+                "status": "Available"
             }
         },
         {
-            "computer_id": 101,
+            "computer_id": 2,
             "configuration": {
-                "monitor": "Dell 24 inch",
+                "monitor": "LG",
                 "CPU": "Intel i5",
                 "RAM": "16GB",
                 "storageType": "SSD",
                 "storageCapacity": "512GB",
-                "status": "active"
-            }
-        },
-        {
-            "computer_id": 101242342332,
-            "configuration": {
-                "monitor": "Dell 24 inch",
-                "CPU": "Intel i5",
-                "RAM": "16GB",
-                "storageType": "SSD",
-                "storageCapacity": "512GB",
-                "status": "active"
+                "status": "Available"
             }
         }
     ]
