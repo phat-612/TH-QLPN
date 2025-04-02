@@ -1,12 +1,32 @@
 {
-  "employees": [
-    {
-      "employee_id": 1,
-      "name": "Tran Van B",
-      "username": "tranvanb",
-      "password": "hashed_password",
-      "address": "123 ABC Street",
-      "phone": "0123456789"
-    }
-  ]
+    "employees": [
+        {
+            "employee_id": 1,
+            "name": "Tran Van B",
+            "username": "tranvanb",
+            "password": "hashed_password",
+            "address": "123 ABC Street",
+            "phone": "0123456789"
+        },
+        {
+            "employee_id": 2,
+            "configuration": {
+                "name": "Nguyen Van A",
+                "username": "nguyenvana",
+                "password": "secure_password",
+                "address": "456 XYZ Street",
+                "phone": "0987654321"
+            }
+        },
+        {
+            "employee_id": 1010,
+            "configuration": {
+                "name": "Nguyen Van Phat",
+                "username": "nguyenvanphat",
+                "password": "secure_password",
+                "address": "456 XYZ Street",
+                "phone": "0987654321"
+            }
+        }
+    ]
 }
