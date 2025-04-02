@@ -1,0 +1,11 @@
+{
+  "players": [
+    {
+      "player_id": 1,
+      "name": "Nguyen Van A",
+      "username": "nguyenvana",
+      "password": "hashed_password",
+      "balance": 50000
+    }
+  ]
+}

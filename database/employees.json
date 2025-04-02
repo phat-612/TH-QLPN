@@ -1,0 +1,12 @@
+{
+  "employees": [
+    {
+      "employee_id": 1,
+      "name": "Tran Van B",
+      "username": "tranvanb",
+      "password": "hashed_password",
+      "address": "123 ABC Street",
+      "phone": "0123456789"
+    }
+  ]
+}

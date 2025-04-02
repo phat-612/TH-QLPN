@@ -1,0 +1,11 @@
+{
+  "reports": [
+    {
+      "report_id": 1,
+      "reported_by": 1,
+      "reported_player_id": 2,
+      "reason": "Cheating",
+      "timestamp": "2024-04-02T12:00:00Z"
+    }
+  ]
+}

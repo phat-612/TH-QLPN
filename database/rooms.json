@@ -1,0 +1,13 @@
+{
+  "rooms": [
+    {
+      "room_id": 1,
+      "list_computers": [
+        {
+          "computer_id": 101,
+          "status": "active"
+        }
+      ]
+    }
+  ]
+}
