@@ -1,0 +1,63 @@
+{
+  "rooms": [
+    {
+      "room_id": 1,
+      "computers": [
+        {
+          "computer_id": 101,
+          "configuration": {
+            "monitor": "Dell 24 inch",
+            "CPU": "Intel i5",
+            "RAM": "16GB",
+            "storage": {
+              "type": "SSD",
+              "capacity": "512GB"
+            }
+          },
+          "status": "active"
+        }
+      ]
+    }
+  ],
+  "players": [
+    {
+      "player_id": 1,
+      "name": "Nguyen Van A",
+      "username": "nguyenvana",
+      "password": "hashed_password",
+      "balance": 50000
+    }
+  ],
+  "employees": [
+    {
+      "employee_id": 1,
+      "name": "Tran Van B",
+      "username": "tranvanb",
+      "password": "hashed_password",
+      "address": "123 ABC Street",
+      "phone": "0123456789"
+    }
+  ],
+  "admin": {
+    "username": "admin",
+    "password": "hashed_password"
+  },
+  "transactions": [
+    {
+      "transaction_id": 1,
+      "player_id": 1,
+      "amount": -20000,
+      "type": "playtime",
+      "timestamp": "2024-04-02T10:00:00Z"
+    }
+  ],
+  "reports": [
+    {
+      "report_id": 1,
+      "reported_by": 1,
+      "reported_player_id": 2,
+      "reason": "Cheating",
+      "timestamp": "2024-04-02T12:00:00Z"
+    }
+  ]
+}
