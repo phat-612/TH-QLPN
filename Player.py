@@ -4,35 +4,41 @@ import os
 
 class Player:
     def __init__(self):
+
         pass
-    def add_player(self, player_id, name, username, password, balance):
-        self.player_id = player_id
-        self.name = name
-        self.username = username
-        self.password = self.hash_password(password)  # Mã hóa mật khẩu
-        self.balance = balance
-
-        player_data = self.load_players()
-
-        # Kiểm tra trùng ID
-        for player in player_data["players"]:
-            if player["player_id"] == self.player_id:
-                print("ID người chơi đã tồn tại! Không thể thêm.")
-                return
+    def add_player(self, name, username, password, balance):
+        data = self.load_players()
+        if data:
+            last_id = max(player["player_id"] for player in data)
+            player_id = last_id + 1
+        else:
+            player_id = 1  # Nếu danh sách rỗng, bắt đầu từ 1
+        
+        name = name
+        username = username
+        password = self.hash_password(password)  # Mã hóa mật khẩu
+        balance = balance
 
         new_player = {
-            "player_id": self.player_id,
-            "name": self.name,
-            "username": self.username,
-            "password": self.password,  # Lưu mật khẩu đã mã hóa
-            "balance": self.balance
+            "player_id": player_id,
+            "name": name,
+            "username": username,
+            "password": password,  # Lưu mật khẩu đã mã hóa
+            "balance": balance
         }
 
-        player_data["players"].append(new_player)
-        self.save_players(player_data)
+        data.append(new_player)
+        self.save_players(data)
+    def get_player_info(self, username):
+        """Lấy thông tin người chơi theo tên đăng nhập."""
+        player_data = self.load_players()
+        for player in player_data:
+            if player["username"] == username:
+                return player["player_id"], player["name"], player['username'] , player["balance"]
+        return None, None, None
     def login(self, username, password):
         player_data = self.load_players()
-        for player in player_data["players"]:
+        for player in player_data:
             if player["username"] == username and self.verify_password(password, player["password"]):
                 return True
         return False
@@ -50,7 +56,7 @@ class Player:
     def load_players():
         try:
             with open("database/players.json", "r", encoding="utf-8") as file:
-                return json.load(file)
+                return json.load(file) # lấy dữ liệu
         except (FileNotFoundError, json.JSONDecodeError):
             return {"players": []}
 
@@ -62,9 +68,11 @@ class Player:
     @staticmethod
     def update_player(player_id, new_data):
         data = Player.load_players()
-        for player in data["players"]:
+        for player in data:
             if player["player_id"] == player_id:
-                player.update(new_data)
+                for key, value in new_data.items():
+                    if key in player:  # Chỉ cập nhật các trường hợp lệ
+                        player[key] = value
                 Player.save_players(data)
                 return "Cập nhật thành công!"
         return "Không tìm thấy người chơi!"
@@ -72,28 +80,9 @@ class Player:
     @staticmethod
     def delete_player(player_id):
         data = Player.load_players()
-        new_players = [player for player in data["players"] if player["player_id"] != player_id]
-        
-        if len(new_players) == len(data["players"]):
+        new_players = [player for player in data if player["player_id"] != player_id]
+        if len(new_players) == len(data):
             return "Không tìm thấy người chơi để xóa!"
-        
-        data["players"] = new_players
+        data = new_players
         Player.save_players(data)
         return "Xóa thành công!"
-
-# # Test thêm player mới
-# playerTest = Player(
-#     player_id=2,
-#     name="Nguyễn Văn B",
-#     username="0354514832",
-#     password="1",
-#     balance=100000
-# )
-
-# print("Thêm dữ liệu thành công")
-
-# # Test cập nhật thông tin player
-# print(Player.update_player(2, {"name": "Nguyễn Văn CC" ,"balance": 99900999}))
-
-# # Test xóa player
-# # print(Player.delete_player(2))

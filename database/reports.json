@@ -1,11 +1,16 @@
-{
-  "reports": [
+[
     {
-      "report_id": 1,
-      "reported_by": 1,
-      "reported_player_id": 2,
-      "reason": "Cheating",
-      "timestamp": "2024-04-02T12:00:00Z"
+        "report_id": 1,
+        "reported_by_username": "nhanvien1",
+        "reported_player_username": "nc1",
+        "reason": "Cheating",
+        "timestamp": "2024-04-02T12:00:00Z"
+    },
+    {
+        "report_id": 2,
+        "reported_by_username": "nhanvien1",
+        "reported_player_username": "nc1",
+        "reason": "choi ngu",
+        "timestamp": "2025-04-05T16:59:30.281873Z"
     }
-  ]
-}
+]

@@ -1,48 +1,26 @@
 {
-  "computers": [
-    {
-      "computer_id": 1,
-      "configuration": {
-        "monitor": "LG",
-        "CPU": "Intel i5",
-        "RAM": "16GB",
-        "storageType": "SSD",
-        "storageCapacity": "512GB",
-        "status": "Available"
-      }
-    },
-    {
-      "computer_id": 2,
-      "configuration": {
-        "monitor": "LG",
-        "CPU": "Intel i5",
-        "RAM": "16GB",
-        "storageType": "SSD",
-        "storageCapacity": "512GB",
-        "status": "Available"
-      }
-    },
-    {
-      "computer_id": 101242342332,
-      "configuration": {
-        "monitor": "Dell 24 inch",
-        "CPU": "Intel i5",
-        "RAM": "16GB",
-        "storageType": "SSD",
-        "storageCapacity": "512GB",
-        "status": "active"
-      }
-    },
-    {
-      "computer_id": 101242342333,
-      "configuration": {
-        "monitor": "LG",
-        "CPU": "Intel i5",
-        "RAM": "16GB",
-        "storageType": "SSD",
-        "storageCapacity": "512GB",
-        "status": "Available"
-      }
-    }
-  ]
+    "computers": [
+        {
+            "computer_id": 1,
+            "configuration": {
+                "monitor": "LG",
+                "CPU": "Intel i5",
+                "RAM": "16GB",
+                "storageType": "SSD",
+                "storageCapacity": "512GB",
+                "status": "broken"
+            }
+        },
+        {
+            "computer_id": 2,
+            "configuration": {
+                "monitor": "LG",
+                "CPU": "Intel i5",
+                "RAM": "16GB",
+                "storageType": "SSD",
+                "storageCapacity": "512GB",
+                "status": "broken"
+            }
+        }
+    ]
 }

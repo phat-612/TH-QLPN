@@ -1,15 +1,18 @@
 import json
 import bcrypt
-from Player import Player
-from Employee import Employee
 import os
 class Admin:
     def __init__(self, ):
         self.username = None
         self.password = None
-        self.player = Player()
-
         pass
+    def getData(self):
+        try:
+            with open("database/admin.json", "r", encoding="utf-8") as file:
+                data = json.load(file)  # lấy dữ liệu
+        except (FileNotFoundError, json.JSONDecodeError):
+            data = {"computers": []}  # Nếu file không tồn tại hoặc dữ liệu không hợp lệ
+        return data
     def add(self, username, password):
         """Lưu thông tin admin vào file admin.json."""
         hash_password = self.hash_password(password)
@@ -23,7 +26,7 @@ class Admin:
             json.dump(admin_data, file, ensure_ascii=False, indent=4)
     def login(self, username, password):
         """Kiểm tra thông tin đăng nhập admin."""
-        admin_data = self.load_from_file()
+        admin_data = self.getData()
         if admin_data["admin"]:
             stored_username = admin_data["admin"]["username"]
             stored_hashed_password = admin_data["admin"]["password"]
@@ -40,13 +43,6 @@ class Admin:
     @staticmethod
     def verify_password(input_password, stored_hashed_password):
         return bcrypt.checkpw(input_password.encode(), stored_hashed_password.encode())
-    def add_player(self, player_id, name, username, password, balance):
-        """Thêm người chơi mới."""
-        self.player.add_player(player_id, name, username, password, balance)
-    def add_employee(self, employee_id, name, username, password, address, phone):
-        """Thêm nhân viên mới."""
-        employee = Employee()
-        employee.add_employee(employee_id, name, username, password, address, phone)
-
+    
 admin = Admin()
 admin.add("admin", "admin")

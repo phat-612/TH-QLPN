@@ -1,15 +1,12 @@
-{
-    "rooms": [
-        {
-            "room_id": 1,
-            "room_name": "PM1",
-            "limit_cpt": 40,
-            "list_computers": [
-                {
-                    "computer_id": 103,
-                    "status": "maintenance"
-                }
-            ]
-        }
+[
+  {
+    "room_id": 1,
+    "room_name": "PM1",
+    "limit_cpt": 40,
+    "list_computers": [
+      {
+        "computer_id": 1
+      }
     ]
-}
+  }
+]

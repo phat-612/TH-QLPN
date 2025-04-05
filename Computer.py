@@ -55,6 +55,7 @@ class Computer:
         if computer_id is None:
             print('Máy tính không tồn tại')
         data = self.getData()
+        computer_id = int(computer_id)
         # Tìm máy tính theo ID
         computers = data['computers']
         isEdit = False
@@ -82,6 +83,7 @@ class Computer:
         print(f"Máy tính với ID {computer_id} đã được chỉnh sửa thành công.")
         self.saveData(data)
     def deleteComputer (self, computer_id):
+        computer_id = int(computer_id)
         if computer_id is None:
             print('Máy tính không tồn tại')
         data = self.getData()
@@ -122,7 +124,12 @@ class Computer:
             print(f"   🗄️ Loại ổ cứng: {computer['configuration']['storageType']}")
             print(f"   💽 Dung lượng ổ cứng: {computer['configuration']['storageCapacity']}")
             print(f"   ✅ Trạng thái: {computer['configuration']['status']}")
-
-# computers = Computer()
-# computers.addComputer(monitor="LG", cpu="Intel i5", ram="16GB", storage_type="SSD", storage_capacity="512GB", status="Available")
-# computers.showAllComputer()
+    def show_computer_status(self, status):
+        data = self.getData()
+        computers = data["computers"]
+        filtered_computers = [computer for computer in computers if computer["configuration"]["status"] == status]
+        if len(filtered_computers) == 0:
+            print(f"Không có máy tính nào với trạng thái {status}.")
+        else:
+            for index, computer in enumerate(filtered_computers, start=1):
+                print(f"\n🖥️{index}. Máy {computer['computer_id']}")

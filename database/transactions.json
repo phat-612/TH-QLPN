@@ -1,11 +1,37 @@
-{
-    "transactions": [
-        {
-            "transaction_id": 1,
-            "player_id": 1,
-            "amount": -20000,
-            "type": "playtime",
-            "timestamp": "2024-04-02T10:00:00Z"
-        }
-    ]
-}
+[
+    {
+        "transaction_id": 1,
+        "player_id": 1,
+        "amount": "20000",
+        "type": "deposit",
+        "timestamp": "2025-04-06T00:35:39.277100"
+    },
+    {
+        "transaction_id": 2,
+        "player_id": 1,
+        "amount": "20000",
+        "type": "deposit",
+        "timestamp": "2025-04-06T00:38:13.744179"
+    },
+    {
+        "transaction_id": 3,
+        "player_id": 1,
+        "amount": "20000",
+        "type": "deposit",
+        "timestamp": "2025-04-06T00:39:43.912096"
+    },
+    {
+        "transaction_id": 4,
+        "player_id": 1,
+        "amount": -3200,
+        "type": "play",
+        "timestamp": "2025-04-06T00:46:29.148077"
+    },
+    {
+        "transaction_id": 5,
+        "player_id": 1,
+        "amount": -13200,
+        "type": "play",
+        "timestamp": "2025-04-06T00:47:46.574224"
+    }
+]
