@@ -57,7 +57,6 @@ class Transaction:
     def delete_transaction(self, transaction_id):
         """Xóa giao dịch theo ID."""
         data = self.load_data()
-
         # Tìm giao dịch cần xóa
         transaction_found = False
         for transaction in data:
@@ -83,16 +82,13 @@ class Transaction:
             date = datetime.datetime.now().strftime('%Y-%m-%d')  # Lấy ngày hiện tại nếu không truyền
 
         data = self.load_data()
-
-        # Tính tổng doanh thu trong ngày
+        print(f"data: {data}")
+        # Tính tổng doanh thu trong ngày    
         total_revenue = 0
-        if "transactions" not in data:
-            print("Không có giao dịch nào.")
-            return total_revenue
         for transaction in data:
-            transaction_date = transaction["timestamp"].split("T")[0]  # Lấy phần ngày từ timestamp
-            if transaction_date == date and transaction["amount"] > 0:  # Chỉ tính các giao dịch có số tiền dương
-                total_revenue += transaction["amount"]
+            so_tien = int(transaction["amount"])
+            if transaction["type"] == 'deposit' and so_tien > 0:  # Chỉ tính các giao dịch có số tiền dương
+                total_revenue += so_tien
 
         return total_revenue
 
