@@ -3,7 +3,9 @@ import bcrypt
 import os
 
 class Player:
-    def __init__(self, player_id, name, username, password, balance):
+    def __init__(self):
+        pass
+    def add_player(self, player_id, name, username, password, balance):
         self.player_id = player_id
         self.name = name
         self.username = username
@@ -28,7 +30,12 @@ class Player:
 
         player_data["players"].append(new_player)
         self.save_players(player_data)
-
+    def login(self, username, password):
+        player_data = self.load_players()
+        for player in player_data["players"]:
+            if player["username"] == username and self.verify_password(password, player["password"]):
+                return True
+        return False
     @staticmethod
     def hash_password(password):
         salt = bcrypt.gensalt()
@@ -74,19 +81,19 @@ class Player:
         Player.save_players(data)
         return "Xóa thành công!"
 
-# Test thêm player mới
-playerTest = Player(
-    player_id=2,
-    name="Nguyễn Văn B",
-    username="0354514832",
-    password="1",
-    balance=100000
-)
+# # Test thêm player mới
+# playerTest = Player(
+#     player_id=2,
+#     name="Nguyễn Văn B",
+#     username="0354514832",
+#     password="1",
+#     balance=100000
+# )
 
-print("Thêm dữ liệu thành công")
+# print("Thêm dữ liệu thành công")
 
-# Test cập nhật thông tin player
-print(Player.update_player(2, {"name": "Nguyễn Văn CC" ,"balance": 99900999}))
+# # Test cập nhật thông tin player
+# print(Player.update_player(2, {"name": "Nguyễn Văn CC" ,"balance": 99900999}))
 
-# Test xóa player
-# print(Player.delete_player(2))
+# # Test xóa player
+# # print(Player.delete_player(2))

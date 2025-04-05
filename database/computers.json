@@ -32,6 +32,17 @@
                 "storageCapacity": "512GB",
                 "status": "active"
             }
+        },
+        {
+            "computer_id": 101242342333,
+            "configuration": {
+                "monitor": "LG",
+                "CPU": "Intel i5",
+                "RAM": "16GB",
+                "storageType": "SSD",
+                "storageCapacity": "512GB",
+                "status": "Available"
+            }
         }
     ]
 }

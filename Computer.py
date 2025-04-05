@@ -123,6 +123,6 @@ class Computer:
             print(f"   💽 Dung lượng ổ cứng: {computer['configuration']['storageCapacity']}")
             print(f"   ✅ Trạng thái: {computer['configuration']['status']}")
 
-computers = Computer()
-computers.addComputer(monitor="LG", cpu="Intel i5", ram="16GB", storage_type="SSD", storage_capacity="512GB", status="Available")
-computers.showAllComputer()
+# computers = Computer()
+# computers.addComputer(monitor="LG", cpu="Intel i5", ram="16GB", storage_type="SSD", storage_capacity="512GB", status="Available")
+# computers.showAllComputer()

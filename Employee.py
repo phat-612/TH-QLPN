@@ -65,9 +65,9 @@ class Employee:
                 return emp
         return None
 
-# Example usage:
-manager = Employee()
-# manager.add_employee(1010, "Nguyen Van Phat", "nguyenvanphat", "secure_password", "456 XYZ Street", "0987654321")
-manager.update_employee(2, name="Tran Van C")
-# manager.delete_employee(2)
-# print(manager.get_all_employees())
+# # Example usage:
+# manager = Employee()
+# # manager.add_employee(1010, "Nguyen Van Phat", "nguyenvanphat", "secure_password", "456 XYZ Street", "0987654321")
+# manager.update_employee(2, name="Tran Van C")
+# # manager.delete_employee(2)
+# # print(manager.get_all_employees())
